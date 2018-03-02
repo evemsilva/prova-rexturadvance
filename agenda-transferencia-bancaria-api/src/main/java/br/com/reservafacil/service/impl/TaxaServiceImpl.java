@@ -22,17 +22,17 @@ public class TaxaServiceImpl implements TaxaService {
 		long dias = ChronoUnit.DAYS.between(hoje, dataTransferencia);
 		
 		if (dias == 0) {
-			return new BigDecimal(3).add(valor.multiply(new BigDecimal(0.03))).setScale(2, BigDecimal.ROUND_HALF_UP);
-		} else if (dias > 0 && dias <= 10) {
+			return new BigDecimal(3).add(valor.multiply(BigDecimal.valueOf(0.03))).setScale(2, BigDecimal.ROUND_HALF_UP);
+		} else if (dias > 0L && dias <= 10L) {
 			return new BigDecimal(12).multiply(new BigDecimal(dias)).setScale(2, BigDecimal.ROUND_HALF_UP);
-		} else if (dias > 10 && dias <= 20) {
-			return valor.multiply(new BigDecimal(0.08)).setScale(2, BigDecimal.ROUND_HALF_UP);
-		} else if (dias > 20 && dias <= 30) {
-			return valor.multiply(new BigDecimal(0.06)).setScale(2, BigDecimal.ROUND_HALF_UP);
-		} else if (dias > 30 && dias <= 40) {
-			return valor.multiply(new BigDecimal(0.04)).setScale(2, BigDecimal.ROUND_HALF_UP);
-		} else if (dias > 40 && (valor.compareTo(new BigDecimal(100_000)) > 0)) {
-			return valor.multiply(new BigDecimal(0.02)).setScale(2, BigDecimal.ROUND_HALF_UP);
+		} else if (dias > 10L && dias <= 20L) {
+			return valor.multiply(BigDecimal.valueOf(0.08)).setScale(2, BigDecimal.ROUND_HALF_UP);
+		} else if (dias > 20L && dias <= 30L) {
+			return valor.multiply(BigDecimal.valueOf(0.06)).setScale(2, BigDecimal.ROUND_HALF_UP);
+		} else if (dias > 30L && dias <= 40L) {
+			return valor.multiply(BigDecimal.valueOf(0.04)).setScale(2, BigDecimal.ROUND_HALF_UP);
+		} else if (dias > 40L && (valor.compareTo(new BigDecimal(100_000)) > 0)) {
+			return valor.multiply(BigDecimal.valueOf(0.02)).setScale(2, BigDecimal.ROUND_HALF_UP);
 		}
 
 		throw new BusinessException("Não há taxa aplicável para este cenário");

@@ -2,8 +2,6 @@ package br.com.reservafacil.controller;
 
 import java.util.List;
 
-import javax.validation.Valid;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -32,12 +30,11 @@ public class TransacaoController {
 	@GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<List<Transacao>> listarTransacoes() {		
 		List<Transacao> transacoes = transacaoService.listarTransferencias();
-		if(transacoes.isEmpty()) return ResponseEntity.noContent().build();
 		return ResponseEntity.ok(transacoes);
 	}
 
 	@PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity<Transacao> agendarTransferencia(@RequestBody @Valid Transacao transacao) throws BusinessException {
+	public ResponseEntity<Transacao> agendarTransferencia(@RequestBody Transacao transacao) throws BusinessException {
 		validaTransacaoService.validar(transacao);
 		Transacao transacaoConcluida = transacaoService.agendarTransferencia(transacao);
 		return new ResponseEntity<>(transacaoConcluida, HttpStatus.CREATED);
