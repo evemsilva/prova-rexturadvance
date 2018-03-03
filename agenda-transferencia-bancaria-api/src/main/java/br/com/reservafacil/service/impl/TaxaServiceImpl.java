@@ -17,7 +17,7 @@ public class TaxaServiceImpl implements TaxaService {
 		
 		LocalDate hoje = LocalDate.now();
 		
-		if (ChronoUnit.DAYS.between(hoje, dataTransferencia) < 0) throw new IllegalArgumentException("Data de transferencia menor que a data atual, não foi possível agendar a transferência");
+		if (ChronoUnit.DAYS.between(hoje, dataTransferencia) < 0) throw new IllegalArgumentException("Data de transferência menor que a data atual.");
 
 		long dias = ChronoUnit.DAYS.between(hoje, dataTransferencia);
 		
@@ -35,7 +35,7 @@ public class TaxaServiceImpl implements TaxaService {
 			return valor.multiply(BigDecimal.valueOf(0.02)).setScale(2, BigDecimal.ROUND_HALF_UP);
 		}
 
-		throw new BusinessException("Não há taxa aplicável para este cenário");
+		throw new BusinessException("Não há taxa aplicável para este cenário.");
 	}
 
 }

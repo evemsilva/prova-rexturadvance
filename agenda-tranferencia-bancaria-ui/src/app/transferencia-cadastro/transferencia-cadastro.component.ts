@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TransferenciaService } from './../transferencia.service';
 import { FormControl } from '@angular/forms';
+import { Message } from 'primeng/api';
 
 @Component({
   selector: 'app-transferencia-cadastro',
@@ -10,7 +11,9 @@ import { FormControl } from '@angular/forms';
 export class TransferenciaCadastroComponent implements OnInit {
 
   transacoes = [];
-  msgs = [];
+  msgs: Message[] = [];
+  dataMinima= new Date();
+
   constructor(private transferenciaService: TransferenciaService) { }
 
   ngOnInit() {
@@ -22,16 +25,11 @@ export class TransferenciaCadastroComponent implements OnInit {
   }
 
   adicionar(frm: FormControl){
-    console.log(frm.value);
-
-    if(frm.value.valorTransferencia === 0) {
-      this.msgs.push({severity:'warn', summary:'O valor deve ser maior que zero.', detail:'Não foi possível agendar a transferência.'});
-      return;
-    }
 
     this.transferenciaService.adicionar(frm.value).subscribe(() => {
         frm.reset();
         this.consultar();
+        this.msgs.push({severity:'success', summary:'Agendamento efetuado com sucesso.', detail:''});
     },
       (mgsErro) => {
         console.log(mgsErro);

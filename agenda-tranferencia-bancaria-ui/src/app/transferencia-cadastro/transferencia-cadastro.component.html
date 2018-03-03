@@ -2,11 +2,11 @@
   <div class="ui-g">
 
     <div class="ui-g-12">
-      <h1>Agendamento de transferências financeiras</h1>
+      <h1>Agenda de transferências bancárias</h1>
     </div>
 
     <div class="ui-g-12 ui-fluid">
-      <p-messages [(value)]="msgs"></p-messages>
+      <p-growl [(value)]="msgs"></p-growl>
     </div>
 
     <div class="ui-g-6 ui-fluid">
@@ -27,7 +27,7 @@
       <label>
         <b>Valor</b>
       </label>
-      <input class="ui-inputtext" currencyMask name="valorTransferencia" [options]="{ prefix: 'R$ ', thousands: '.', decimal: ',', allowNegative: 'false', allowZero: 'false'}"
+      <input class="ui-inputtext" currencyMask name="valorTransferencia" [options]="{ prefix: '$ ', thousands: ',', decimal: '.', allowNegative: 'false', allowZero: 'false'}"
         [required]="true" ngModel/>
     </div>
 
@@ -35,7 +35,7 @@
       <label>
         <b>Data de Transferência</b>
       </label>
-      <p-calendar name="dataTransferencia" dateFormat="dd/mm/yy" [required]="true" ngModel></p-calendar>
+      <p-calendar name="dataTransferencia" dateFormat="dd/mm/yy" showButtonBar="true" [minDate]="dataMinima" [readonlyInput]="true" [required]="true" ngModel></p-calendar>
     </div>
 
     <div class="ui-g-12">
@@ -47,7 +47,7 @@
 
 <div class="ui-g-12">
 
-  <p-table [value]="transacoes">
+  <p-table [value]="transacoes" [paginator]="true" [rows]="6">
     <ng-template pTemplate="header">
       <tr>
         <th>Conta de Origem</th>
