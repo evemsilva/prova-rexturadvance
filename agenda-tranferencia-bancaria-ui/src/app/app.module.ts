@@ -13,6 +13,8 @@ import {InputMaskModule} from 'primeng/inputmask';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import {CalendarModule} from 'primeng/calendar';
 import { CurrencyMaskModule } from "ng2-currency-mask";
+import {MessagesModule} from 'primeng/messages';
+import {MessageModule} from 'primeng/message';
 
 import { HttpClientModule } from '@angular/common/http';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
@@ -35,7 +37,9 @@ import { TransferenciaService } from './transferencia.service';
     HttpClientModule,
     FormsModule,
     AngularFontAwesomeModule,
-    CurrencyMaskModule
+    CurrencyMaskModule,
+    MessagesModule,
+    MessageModule
   ],
   providers: [
     TransferenciaService

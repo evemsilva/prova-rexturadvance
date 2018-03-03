@@ -5,28 +5,41 @@
       <h1>Agendamento de transferências financeiras</h1>
     </div>
 
-    <div class="ui-g-6 ui-fluid">
-      <label><b>Conta Origem</b></label>
-      <p-inputMask name="contaOrigem" mask="999999" ngModel></p-inputMask>
+    <div class="ui-g-12 ui-fluid">
+      <p-messages [(value)]="msgs"></p-messages>
     </div>
 
     <div class="ui-g-6 ui-fluid">
-      <label><b>Conta Destino</b></label>
-      <p-inputMask name="contaDestino" mask="999999" ngModel></p-inputMask>
+      <label>
+        <b>Conta Origem</b>
+      </label>
+      <p-inputMask name="contaOrigem" mask="999999" [required]="true" ngModel></p-inputMask>
     </div>
 
     <div class="ui-g-6 ui-fluid">
-      <label><b>Valor</b></label>
-      <input class="ui-inputtext" currencyMask name="valorTransferencia" [options]="{ prefix: 'R$ ', thousands: '.', decimal: ',', allowNegative: 'false'  }" ngModel/>
+      <label>
+        <b>Conta Destino</b>
+      </label>
+      <p-inputMask name="contaDestino" mask="999999" [required]="true" ngModel></p-inputMask>
     </div>
- 
+
     <div class="ui-g-6 ui-fluid">
-      <label><b>Data de Transferência</b></label>
-      <p-calendar name="dataTransferencia" dateFormat="dd/mm/yy" ngModel></p-calendar>
+      <label>
+        <b>Valor</b>
+      </label>
+      <input class="ui-inputtext" currencyMask name="valorTransferencia" [options]="{ prefix: 'R$ ', thousands: '.', decimal: ',', allowNegative: 'false', allowZero: 'false'}"
+        [required]="true" ngModel/>
+    </div>
+
+    <div class="ui-g-6 ui-fluid">
+      <label>
+        <b>Data de Transferência</b>
+      </label>
+      <p-calendar name="dataTransferencia" dateFormat="dd/mm/yy" [required]="true" ngModel></p-calendar>
     </div>
 
     <div class="ui-g-12">
-      <button pButton type="submit" label="Adicionar"></button>
+      <button pButton [disabled]="frm.invalid" type="submit" label="Adicionar"></button>
     </div>
 
   </div>
