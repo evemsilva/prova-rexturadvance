@@ -72,7 +72,7 @@ public class ApplicationTests {
 	@Test
 	public void testCalculaTaxaMaiorQuarentaDiasValorMenorIgualCemMil() {	
 		String message = restTemplate.postForObject(URI, new Transacao("111222", "222333", new BigDecimal(100), LocalDate.now().plusDays(41L)), BusinessException.class).getMessage();
-		assertThat(message).isEqualTo("Não há taxa aplicável para este cenário");
+		assertThat(message).isEqualTo("Não há taxa aplicável para este cenário.");
 	}
 	
 	@SuppressWarnings("unchecked")
