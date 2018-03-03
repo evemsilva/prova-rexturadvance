@@ -1,5 +1,5 @@
 # prova-rexturadvance
-Prova que contempla o processo seletivo da empresa RexturAdvance
+Prova que contempla o processo seletivo da empresa RexturAdvance.
 
 O projeto foi divido em dois modulos:
 
@@ -8,11 +8,13 @@ O projeto foi divido em dois modulos:
 Onde está aplicado toda a lógica de negócio do sistema, disponibilizado em uma API desenvolvida utilizando a linguagem Java 8.
 Foram usados os frameworks abaixo:
 
-Spring Boot: Para facilitar o processo de configuração e publicação da aplicação.
-Spring MVC Web: Para disponibilizar os recursos (URI) da aplicação, podendo utilizar a arquitetura REST.  
-Spring Data JPA: Para realizar a interface com o banco de dados H2 (Memória).
-H2 Memory Database: Banco de dados em mémoria, geralmente utilizado para testes.
-Jackson: Para disponibizar o resultado das requisições no formato JSON.
+<ul>
+  <li><b>Spring Boot:</b> Para facilitar o processo de configuração e publicação da aplicação.</li>
+  <li><b>Spring MVC Web:</b> Para disponibilizar os recursos (URI) da aplicação, podendo utilizar a arquitetura REST.</li>
+  <li><b>Spring Data JPA:</b> Para realizar a interface com o banco de dados H2 (Memória).</li>
+  <li><b>H2 Memory Database:</b> Banco de dados em mémoria, geralmente utilizado para testes.</li>
+  <li><b>Jackson:</b> Para disponibizar o resultado das requisições no formato JSON.</li>
+</ul>
 
 Instruções para execução.
 
