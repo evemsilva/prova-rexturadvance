@@ -42,7 +42,7 @@ Foram usados os frameworks abaixo:
 <ol type="1">
   <li>Instale a ultima versão do NodeJS.</li>
   <li>Usando prompt de comando, acesse o diretório <b>agenda-tranferencia-bancaria-ui</b>.</li>
-  <li>Execute o comando: <b>npm install</b></li>
+  <li>Execute o comando: <b>npm install</b> (Será efetuado download das dependências do projeto, talvez demore alguns instantes)</li>
   <li>Execute o comando: <b>npm start</b></li>
   <li>Usando navegador, acesse a tela através da URL <b><a href="http://localhost:4200">http://localhost:4200</a></b></li>
   <li>Aproveite :)</li>
