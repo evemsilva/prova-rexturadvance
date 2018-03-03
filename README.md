@@ -22,8 +22,8 @@ Foram usados os frameworks abaixo:
 <ol type="1">
   <li>Usando uma IDE de sua preferência, importe o projeto Maven (diretório <b>agenda-tranferencia-bancaria-api</b>) e baixe as dependências necessárias.</li>
   <li>No diretório mencionado execute no prompt de comando: <b>mvnw clean install</b></li>
-  <li>Ainda no prompt de comando acesse a pasta target e execute o comando: <b>java -jar agenda-transferencia-bancaria-api-0.0.1-SNAPSHOT.jar</b></li>
-  <li>Aplicação estará em execução e os recursos estarão disponíveis através da URL (http://localhost:9090/v1/transferencias)</li>
+  <li>Ainda no prompt de comando, acesse a pasta <b>target</b> e execute o comando: <b>java -jar agenda-transferencia-bancaria-api-0.0.1-SNAPSHOT.jar</b></li>
+  <li>Aplicação estará em execução e os recursos estarão disponíveis através da URL [a link](http://localhost:9090/v1/transferencias)</li>
 </ol>  
 
 <h3><b>Front-End</b></h3>
@@ -33,7 +33,7 @@ Foram usados os frameworks abaixo:
 
 <ul>
   <li><b>Angular 5:</b> Para manipular as informações recebidas do back-end.</li>
-  <li><b>Angular CLI 1.7.1:</b> WebPack onde é gerada toda a infra-estrutura da aplicação.</li>
+  <li><b>Angular CLI 1.7.1:</b> <b>WebPack</b> onde é gerada toda a infra-estrutura da aplicação.</li>
   <li><b>PrimeNG:</b> Diretivas do Angular para utilização de componentes visuais.</li>
 </ul>
 
@@ -44,6 +44,6 @@ Foram usados os frameworks abaixo:
   <li>Usando prompt de comando, acesse o diretório <b>agenda-tranferencia-bancaria-ui</b>.</li>
   <li>Execute o comando: <b>npm install</b></li>
   <li>Execute o comando: <b>npm start</b></li>
-  <li>Usando navegador, acesse a tela através da URL (http://localhost:4200)</li>
+  <li>Usando navegador, acesse a tela através da URL [a link](http://localhost:4200)</li>
   <li>Aproveite :)</li>
 </ol>
