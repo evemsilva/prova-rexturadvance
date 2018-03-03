@@ -12,7 +12,7 @@ export class TransferenciaCadastroComponent implements OnInit {
 
   transacoes = [];
   msgs: Message[] = [];
-  dataMinima= new Date();
+  dataMinima = new Date();
 
   constructor(private transferenciaService: TransferenciaService) { }
 
@@ -21,19 +21,23 @@ export class TransferenciaCadastroComponent implements OnInit {
   }
 
   consultar() {
-    this.transferenciaService.listar().subscribe(dados => this.transacoes = dados);
+    this.transferenciaService.listar().subscribe(dados => { this.transacoes = dados },
+      (mgsErro) => {
+        this.msgs.push({ severity: 'error', summary: 'Houve um erro durante a consulta de transferências', detail: '' });
+        return;
+      }
+    );
   }
 
-  adicionar(frm: FormControl){
+  adicionar(frm: FormControl) {
 
     this.transferenciaService.adicionar(frm.value).subscribe(() => {
-        frm.reset();
-        this.consultar();
-        this.msgs.push({severity:'success', summary:'Agendamento efetuado com sucesso.', detail:''});
+      frm.reset();
+      this.consultar();
+      this.msgs.push({ severity: 'success', summary: 'Agendamento efetuado com sucesso.', detail: '' });
     },
       (mgsErro) => {
-        console.log(mgsErro);
-        this.msgs.push({severity:'error', summary: mgsErro.error.message, detail:'Não foi possível agendar a transferência.'});
+        this.msgs.push({ severity: 'error', summary: mgsErro.error.message, detail: 'Não foi possível agendar a transferência.' });
         return;
       });
   }
