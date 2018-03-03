@@ -1,3 +1,60 @@
-<p>
-  transferencia-cadastro works!
-</p>
+<form #frm="ngForm" (ngSubmit)="adicionar(frm)">
+  <div class="ui-g">
+
+    <div class="ui-g-12">
+      <h1>Agendamento de transferências financeiras</h1>
+    </div>
+
+    <div class="ui-g-6 ui-fluid">
+      <label><b>Conta Origem</b></label>
+      <p-inputMask name="contaOrigem" mask="999999" ngModel></p-inputMask>
+    </div>
+
+    <div class="ui-g-6 ui-fluid">
+      <label><b>Conta Destino</b></label>
+      <p-inputMask name="contaDestino" mask="999999" ngModel></p-inputMask>
+    </div>
+
+    <div class="ui-g-6 ui-fluid">
+      <label><b>Valor</b></label>
+      <input class="ui-inputtext" currencyMask name="valorTransferencia" [options]="{ prefix: 'R$ ', thousands: '.', decimal: ',', allowNegative: 'false'  }" ngModel/>
+    </div>
+ 
+    <div class="ui-g-6 ui-fluid">
+      <label><b>Data de Transferência</b></label>
+      <p-calendar name="dataTransferencia" dateFormat="dd/mm/yy" ngModel></p-calendar>
+    </div>
+
+    <div class="ui-g-12">
+      <button pButton type="submit" label="Adicionar"></button>
+    </div>
+
+  </div>
+</form>
+
+<div class="ui-g-12">
+
+  <p-table [value]="transacoes">
+    <ng-template pTemplate="header">
+      <tr>
+        <th>Conta de Origem</th>
+        <th>Conta de Destino</th>
+        <th>Valor da transferência</th>
+        <th>Taxa</th>
+        <th>Data da transferência</th>
+        <th>Data da agendamento</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-transacao>
+      <tr style="text-align: center">
+        <td>{{transacao.contaOrigem}}</td>
+        <td>{{transacao.contaDestino}}</td>
+        <td>{{transacao.valorTransferencia | currency}}</td>
+        <td>{{transacao.taxa | currency}}</td>
+        <td>{{transacao.dataTransferencia | date:'dd/MM/yyyy'}}</td>
+        <td>{{transacao.dataAgendamento | date:'dd/MM/yyyy'}}</td>
+      </tr>
+    </ng-template>
+  </p-table>
+
+</div>

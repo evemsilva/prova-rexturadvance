@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  titulo = 'Cadastro de transferências bancárias';
+  titulo = 'Prova RexturAdvance';
 
   constructor() { }
 
