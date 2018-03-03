@@ -16,6 +16,3 @@ dependency-reduced-pom.xml
 buildNumber.properties
 .mvn/timing.properties
 .mvn/wrapper/
-
-### Heroku ###
-ProcFile
