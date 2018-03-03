@@ -14,16 +14,16 @@ Foram usados os frameworks abaixo:
   <li><b>Spring Data JPA:</b> Para realizar a interface com o banco de dados H2 (Memória).</li>
   <li><b>H2 Memory Database:</b> Banco de dados em mémoria, geralmente utilizado para testes.</li>
   <li><b>Jackson:</b> Para disponibizar o resultado das requisições no formato JSON.</li>
-  <li><b>Junit:</b> Para efetuar os testes referente as regras de negócio.</li>
+  <li><b>Junit:</b> Para efetuar os testes unitários referente as regras de negócio.</li>
 </ul>
 
 <h3><b>Instruções para execução.</b></h3>
 
 <ol type="1">
   <li>Usando uma IDE de sua preferência, importe o projeto Maven (diretório <b>agenda-tranferencia-bancaria-api</b>) e baixe as dependências necessárias.</li>
-  <li>No diretório mencionado execute no prompt de comando <b>mvnw clean install</b>.</li>
-  <li>Ainda no prompt de comando acesse a pasta target e execute o comando: <b>java -jar agenda-transferencia-bancaria-api-0.0.1-SNAPSHOT.jar</b>.</li>
-  <li>Aplicação estará em execução e os recursos estarão disponíveis através da URL http://localhost:9090/v1/tranferencias</li>
+  <li>No diretório mencionado execute no prompt de comando: <b>mvnw clean install</b></li>
+  <li>Ainda no prompt de comando acesse a pasta target e execute o comando: <b>java -jar agenda-transferencia-bancaria-api-0.0.1-SNAPSHOT.jar</b></li>
+  <li>Aplicação estará em execução e os recursos estarão disponíveis através da URL <a>http://localhost:9090/v1/transferencias</a></li>
 </ol>  
 
 <h3><b>Front-End</b></h3>
@@ -42,8 +42,8 @@ Foram usados os frameworks abaixo:
 <ol type="1">
   <li>Instale a ultima versão do NodeJS.</li>
   <li>Usando prompt de comando, acesse o diretório <b>agenda-tranferencia-bancaria-ui</b>.</li>
-  <li>Execute o comando <b>npm install</b>.</li>
-  <li>Execute o comando <b>npm start</b>.</li>
-  <li>Usando navegador, acesse a tela através da URL http://localhost:4200</b>.</li>
+  <li>Execute o comando: <b>npm install</b></li>
+  <li>Execute o comando: <b>npm start</b></li>
+  <li>Usando navegador, acesse a tela através da URL <a>http://localhost:4200</a></b>.</li>
   <li>Aproveite :)</li>
 </ol>
