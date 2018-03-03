@@ -3,6 +3,7 @@ RemoteSystemsTempFiles/
 recommenders/
 /.metadata/
 .recommenders/
+.sonarlint/
 
 ### Maven ###
 target/
