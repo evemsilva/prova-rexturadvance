@@ -23,7 +23,7 @@ Foram usados os frameworks abaixo:
   <li>Usando uma IDE de sua preferência, importe o projeto Maven (diretório <b>agenda-tranferencia-bancaria-api</b>) e baixe as dependências necessárias.</li>
   <li>No diretório mencionado execute no prompt de comando: <b>mvnw clean install</b></li>
   <li>Ainda no prompt de comando, acesse a pasta <b>target</b> e execute o comando: <b>java -jar agenda-transferencia-bancaria-api-0.0.1-SNAPSHOT.jar</b></li>
-  <li>Aplicação estará em execução e os recursos estarão disponíveis através da URL <a href="http://localhost:9090/v1/transferencias">http://localhost:9090/v1/transferencias</a></li>
+  <li>Aplicação estará em execução e os recursos estarão disponíveis através da URL <b><a href="http://localhost:9090/v1/transferencias">http://localhost:9090/v1/transferencias</a></b></li>
 </ol>  
 
 <h3><b>Front-End</b></h3>
@@ -44,6 +44,6 @@ Foram usados os frameworks abaixo:
   <li>Usando prompt de comando, acesse o diretório <b>agenda-tranferencia-bancaria-ui</b>.</li>
   <li>Execute o comando: <b>npm install</b></li>
   <li>Execute o comando: <b>npm start</b></li>
-  <li>Usando navegador, acesse a tela através da URL <a href="http://localhost:4200">http://localhost:4200</a></li>
+  <li>Usando navegador, acesse a tela através da URL <b><a href="http://localhost:4200">http://localhost:4200</a></b></li>
   <li>Aproveite :)</li>
 </ol>
