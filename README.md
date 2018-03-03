@@ -1,7 +1,7 @@
 # prova-rexturadvance
 <h2>Prova que contempla o processo seletivo da empresa RexturAdvance.</h2>
 
-<h3>O projeto foi divido em dois modulos:</h3>
+<h3>O projeto foi divido em dois módulos:</h3>
 
 <h3><b>Back-End</b></h3>
 
